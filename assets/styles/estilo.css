@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Inter:wght@300;400;700&family=Montserrat:wght@200;300;500;700&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /*border: 1px black solid;*/
+    background: url(../imagenes/fondo.jpg);
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+img {
+    max-width: 100%;
+    max-height: 50%;
+    /*border: 1px black solid;*/
+}
+
+.header, .nav, .main, .presentacion, .contactarse_container,
+.lenguajes, .footer {
+    padding: 30px;
+    margin: auto;
+    /*border: 1px black solid;*/
+    color: white;
+}
+
+.header {
+    padding: 0;
+    margin: 0;
+}
+
+.header_container {
+    display: grid;
+    background: url(../imagenes/html.jpg);
+    position: relative;
+    height: 100%;
+    color: white;
+    max-height: 25vh;
+}
+
+.header_texto {
+    font-size: 5vh;
+    padding: 8px;
+    text-align: right;
+    animation-name: aparece_header;
+    animation-duration: 2.5s;
+}
+
+.nav {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    background: black;
+    border: 1px white solid;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul:hover a { /* lo aplico al ul */
+    filter: blur(1.5px); /* cuando hovereo el menu aparece difuminado */
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 15px;
+    padding: 8px;
+    transition: 0.5s;
+    animation-name: aparece_nav;
+    animation-duration: 7s;
+}
+
+.nav ul li a:hover { /* lo palico al a */
+    background: white;
+    color: black;
+    border-radius: 8px;
+    filter: none; /* cuando hovereo los a quita el difuminado*/
+}
+
+@keyframes aparece_nav {
+    0% { transform: translateY(100%); color: black;}
+    100% { transform: translateY(0%); color: white;}
+}
+
+#home {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.presentacion {
+    margin: 0;
+    padding: 10%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fotobio {
+    max-width: 300px;
+    max-height: 300px;
+    border-style: groove;
+}
+
+.texto_bio {
+    text-align: center;
+}
+
+.articulo {
+    margin: 20px;
+    max-width: 70%;
+}
+
+.contactarse_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 70%;
+    padding: 0;
+}
+
+.contactarse_caja {
+    padding: 1em;
+    height: 50%;
+}
+
+.contactarse_imagen {
+    max-width: 90em;
+    border: 2px white solid;
+    margin: auto;
+}
+
+.boton_contacto {
+    position: relative;
+    display: inline-block;
+    color: white;
+    border: 2px white solid;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.boton_contacto:hover {
+    background: darkblue;
+    color: white;
+}
+
+.contactarse_container .boton_contacto :hover {
+    color: blue;
+}
+
+.lenguajes h2 {
+    text-align: center;
+    margin-top: 2.5em;
+    text-decoration: overline;
+}
+
+#divs_container {
+    width: 99%;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px; /* espacio entre grillas*/
+    grid-template-areas: 
+        ".      leng1       ."
+        "leng2  leng1   leng3"
+        "leng2  leng4   leng3"
+        ".      leng4       .";
+}
+
+.lenguaje {
+    border: 2px white solid;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* la pseudoclase nth last of type me permite seleccionar cada elemento de esa clase y modificarlo individualmente*/
+.lenguaje:nth-last-of-type(1){
+    grid-area: leng4;
+}
+.lenguaje:nth-last-of-type(2){
+    grid-area: leng3;
+}
+.lenguaje:nth-last-of-type(3){
+    grid-area: leng2;
+}
+.lenguaje:nth-last-of-type(4){
+    grid-area: leng1;
+}
+
+.formulario {
+    color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 40px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.mensaje_formulario {
+    font-size: 1.2em;
+    max-height: 100%;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin: 1.2em;
+}
+
+.mainCondiciones {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    text-align: center;
+    border: 2px white solid;
+}
+
+.condiciones {
+    display: flex;
+    flex-flow: column;
+    margin: 5% 10% 5% 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+    color: white;
+}
+
+
+.aceptaTerminos input:hover {
+    background: darkblue;
+    color: white;
+}
+
+#footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px white solid;
+}
+
+.footer_container {
+    padding: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    background-image: url(../imagenes/background.jpg);
+    color: white;
+}
+
+#footer .copyright {
+    display: flex;
+}
+
+#footer .footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#footer .footer_container 
+.redes_sociales ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+#footer .footer_container ul:hover a{
+    filter:blur(2px)
+}
+
+#footer .footer_container ul a:hover{
+    filter: none;
+}
+
+.redes_sociales a {
+    display: block,;
+    padding: 0 10px;
+    color: white;
+    line-height: 50px;
+    font-size: 25px;
+    transition: 0.2s;
+}
+
+.imagen_footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: right;
+}
+
+.imagen_footer img {
+    align-items: center;
+    max-width: 30%;
+    max-height: 30%;
+}
+
+@keyframes aparece_header {
+    0% { transform: translateX(100%);}
+    100% { transform: translateX(0%);}
+}
+
+@media screen and (max-width: 768px) {
+
+    *{
+        font-size: 1.03em;
+    }
+
+    .header {
+        padding: 0;
+        margin: 0;
+    }
+
+    .header, .nav, .main, .presentacion, .contactarse_container,
+    .lenguajes, .footer {
+        padding: 5px;
+        margin: auto;
+        /*border: 1px black solid;*/
+        color: white;
+    }
+    
+    .header_container {
+        display: grid;
+        background: url(../imagenes/html.jpg);
+        position: relative;
+        height: 100%;
+        color: white;
+        max-height: 25vh;
+    }
+    
+    .header_texto {
+        font-size: 3vh;
+        padding: 8px;
+        text-align: center;
+        animation-name: aparece_header;
+        animation-duration: 2.5s;
+    }
+
+    .nav {
+        position: relative;
+        padding: 15px;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        background: black;
+        border: 1px white solid;
+    }
+    
+    .nav ul {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+    
+    .nav ul:hover a { /* lo aplico al ul */
+        filter: blur(1.5px); /* cuando hovereo el menu aparece difuminado */
+    }
+    
+    .nav ul li {
+        list-style: none;
+    }
+    
+    .nav ul li a {
+        text-decoration: none;
+        font-size: 20px;
+        margin: 3px;
+        padding: 3px;
+        transition: 0.5s;
+        animation-name: aparece_nav;
+        animation-duration: 7s;
+    }
+
+    .nav ul li a:hover { /* lo palico al a */
+        background: white;
+        color: black;
+        border-radius: 8px;
+        filter: none; /* cuando hovereo los a quita el difuminado*/
+    }
+
+    .presentacion {
+        margin: 0;
+        padding: 10%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .articulo {
+        margin: 10px;
+        max-width: 90%;
+    }
+
+    .contactarse_caja {
+        padding: 0.5em;
+        height: 50%;
+    }
+
+    #divs_container {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .lenguajes h2 {
+        text-align: center;
+        margin-top: 2.5em;
+        text-decoration: underline;
+        font-size: 1.4em;
+    }
+
+    .lenguaje h3 {
+        text-align: center;
+    }
+
+    .lenguaje .parrafo_lenguajes {
+        font-size: 0.85em;
+        justify-content: left;
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+
+    .footer_container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        background: url(../imagenes/html.jpg);
+    }
+}
+
+

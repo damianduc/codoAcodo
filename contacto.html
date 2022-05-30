@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4fc022438b.js" crossorigin="anonymous"></script>
+    <script src="./JS/formulario.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/estilo.css">
+    <title>Contacto</title>
+</head>
+<body>
+    
+    <header class="header">
+        
+        <div class="header_container">
+            
+            <div class="header_texto">
+                <h1 class="header_titulo">DAMIAN DUCHEIN</h1>
+                <P class="subtitulo">Desarrollo Web</P>
+            </div>
+        
+        </div>
+    
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li> <a id="home" href="index.html"> HOME </a></li>
+            <li> <a href="contacto.html"> Contacto </a></li>
+            <li> <a href="#footer"> Redes Sociales </a></li>
+            <li> <a href="#divs_container"> Herramientas utilizadas</a></li>
+        </ul>
+
+    </nav>
+
+        <section class="formulario" >
+            <p class="mensaje_formulario"> <b>A continuación, te dejo un formulario para que completes <br> y pueda ponerme en contacto
+                lo más pronto posible. <br><br> Muchas Gracias. <br><br><br><br><br></b> 
+            </p>
+            <form name="formulario1" id="formulario1" action="#"  >
+        
+                <div class="datos">
+                    <label for="nombre">Nombre </label>
+                    <input type="text" name="nombre" id="nombre"><br><br>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido"><br><br>
+                    <label for="telefono">Telefono</label>
+                    <input type="text" name="telefono" id="telefono"> <br><br>
+                    <label for="email">E Mail</label>
+                    <input type="email" name="email" id="email"> <br><br>
+                </div>
+                <label for="conoce">Como me conociste?</label>
+                <select name="conoce" id="conoce"><br><br>
+                    <option value="insta">Publicidad</option>
+                    <option value="recom">Recomendado</option>
+                    <option value="market">LinkedIn</option> 
+                    <option value="otro">Otro</option>
+                </select>
+                <br><br><br>
+                <label for="terminos">Acepto los <a href="terminos.html">términos y condiciones</a>  del formulario de contacto </label>
+                <input type="checkbox" name="terminos" id="terminos"> <br><br>
+                <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Si así lo deseas, podés utilizar este espacio para detallar la consulta"></textarea> <br><br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </form>
+        </section>  
+
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13128.105442420536!2d-58.47441909999999!3d-34.6540372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc97eac6cc653%3A0xc7b3ee7663d54a62!2sMart%C3%ADnez%20Castro%201357%2C%20C1407%20JXW%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1652222290181!5m2!1ses-419!2sar" width="90%" height="400" style="border:2;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <footer id="footer">
+            <div class="footer_container">
+    
+                <section class="imagen_footer">
+                    <p><b>DAMIAN DUCHEIN <br> Desarrollo Web</p></b> 
+                </section>
+    
+                <section class="redes_sociales">
+                    <ul> <!--seccion del footer en lista con hipervinculo en icono de fontawesome-->
+                        <li><a href="" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+    
+                    </ul>
+                         
+                </section>
+    
+                <section class="coyright"> 
+                    Derechos reservados <br> DamianDuchein Dev &copy; <br> Buenos Aires, Argetnina. 2022.
+                </section>
+
+</body>
+</html>
